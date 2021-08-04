@@ -36,6 +36,7 @@ SDK: openjdk-16 version 16
 * java -jar ./AdminConsole.jar 127.0.0.1 2000 server
 * java -jar ./MesaVoto.jar 224.0.224.0 9876 127.0.0.1 2000 server DEI eleicao1est
 * java -jar ./TerminalVoto.jar 224.0.224.0 9876
+
 (Abrir .war file num containar, i. e., Tomcat)
 
 
