@@ -1,0 +1,10 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="TerminalVoto" type="Application" factoryName="Application" singleton="false">
+    <option name="MAIN_CLASS_NAME" value="VotingTerminal.TerminalVoto" />
+    <module name="Projeto" />
+    <option name="PROGRAM_PARAMETERS" value="224.0.224.0 9876" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>

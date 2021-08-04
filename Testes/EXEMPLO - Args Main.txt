@@ -1,0 +1,15 @@
+RMIServer 127.0.0.1 2000 server
+RMIServer 127.0.0.1 2000 server
+
+AdminConsole 127.0.0.1 2000 server
+AdminConsole 127.0.0.1 2000 server
+
+MesaVoto 224.0.224.0 9876 127.0.0.1 2000 server DEI eleicao1est
+MesaVoto 224.0.225.0 9000 127.0.0.1 2000 server DEEC eleicao1est
+MesaVoto 224.0.226.0 9111 127.0.0.1 2000 server DEI eleicao2func
+
+TerminalVoto 224.0.224.0 9876
+TerminalVoto 224.0.224.0 9876
+TerminalVoto 224.0.224.0 9876
+TerminalVoto 224.0.225.0 9000
+TerminalVoto 224.0.226.0 9111

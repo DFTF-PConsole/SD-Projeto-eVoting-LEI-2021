@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- The core configuration file for the framework is the default (struts.xml) file
+and should reside on the classpath of the webapp (generally /WEB-INF/classes). -->
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+
+    <!-- devMode equals debug information and reload everything for every request -->
+    <constant name="struts.devMode" value="true" />
+    <constant name="struts.ui.theme" value="xhtml" />
+    <!-- themes: simple, css_xhtml, xhtml -->
+
+    <package name="default" namespace="/" extends="struts-default">
+
+        <default-action-ref name="index" />
+
+        <global-results>
+            <result name="error">/error.jsp</result>
+        </global-results>
+
+        <!-- all exceptions not caught by the application will lead to error.jsp -->
+        <global-exception-mappings>
+            <exception-mapping exception="java.lang.Exception" result="error" />
+        </global-exception-mappings>
+
+        <action name="index">
+            <result>/index.jsp</result>
+        </action>
+
+        <action name="registarPessoa" class="actions.RegistarAction" method="displayRegisto">
+            <result name="none">/registarPessoa.jsp</result>
+        </action>
+
+        <action name="criarEleicao" class="actions.RegistarAction" method="displayCriarEleicao">
+            <result name="none">/criarEleicao.jsp</result>
+        </action>
+
+        <action name="criarEleicao2" class="actions.CriarEleicaoAction" method="execute">
+            <result name="success">/admin.jsp</result>
+        </action>
+
+        <action name="editarEleicao" class="actions.SearchAction" method="displayEleicoes">
+            <result name="none">/selectEleicao.jsp</result>
+        </action>
+
+        <action name="consultarEleicao" class="actions.SearchAction" method="displayEleicoes">
+            <result name="none">/selectEleicao.jsp</result>
+        </action>
+
+        <action name="adicionarListaCandidata" class="actions.SearchAction" method="displayEleicoes">
+            <result name="none">/selectEleicao.jsp</result>
+        </action>
+
+        <action name="adicionarMesaVoto" class="actions.SearchAction" method="displayEleicoes">
+            <result name="none">/selectEleicao.jsp</result>
+        </action>
+
+        <action name="auditoria" class="actions.SearchAction" method="displayEleicoes">
+            <result name="none">/selectEleicao.jsp</result>
+        </action>
+
+        <action name="search" class="actions.SearchAction" method="execute">
+            <result name="consultar">/consultarEleicao.jsp</result>
+            <result name="editar">/editarEleicao.jsp</result>
+            <result name="lista">/adicionarListaCandidata.jsp</result>
+            <result name="mesa">/adicionarMesaVoto.jsp</result>
+            <result name="audit">/auditoria.jsp</result>
+        </action>
+
+        <action name="auditoriaSubmit" class="actions.AuditoriaAction" method="execute">
+            <result name="success">/auditoriaResult.jsp</result>
+        </action>
+
+        <action name="mesaVotoSubmit" class="actions.AdicionarMesaVotoAction" method="execute">
+            <result name="success">/admin.jsp</result>
+        </action>
+
+        <action name="registar" class="actions.RegistarAction">
+            <result name="success">/admin.jsp</result>
+        </action>
+
+        <action name="login" class="actions.LoginAction">
+            <result name="success">/menuUser.jsp</result>
+            <result name="admin">/admin.jsp</result>
+            <result name="login">/index.jsp</result>
+        </action>
+
+        <action name="selectVotar" class="actions.VotarAction" method="displayData">
+            <result name="none">/votar.jsp</result>
+        </action>
+
+        <action name="adicionarListaCandidataSubmit" class="actions.AdicionarListaAction" method="execute">
+            <result name="success">/admin.jsp</result>
+        </action>
+
+        <action name="admin">
+            <result>/admin.jsp</result>
+        </action>
+
+        <action name="menuUser">
+            <result>/menuUser.jsp</result>
+        </action>
+
+        <action name="votarAction" class="actions.VotarAction" method="execute">
+            <result name="success">/info.jsp</result>
+        </action>
+
+        <action name="info" class="actions.VotarAction">
+        </action>
+
+        <action name="editarEleicaoSubmit" class="actions.EditarEleicaoAction" method="execute">
+            <result name="success">/admin.jsp</result>
+        </action>
+
+    </package>
+
+</struts>

@@ -1,0 +1,69 @@
+add ; estudante ; fulano est; 123 ; rua ; 1234-567 ; 123 ; 1 ; 2 ; 2050 ; FCTUC ; DEI ; 321password ; 2020123456
+add ; estudante ; beltrano est; 123 ; rua2 ; 1234-111 ; 321 ; 1 ; 2 ; 2050 ; FCTUC ; DEI ; word ; 2020999999
+add ; estudante ; sicrano est; 123 ; rua49 ; 1234-000 ; 12345 ; 1 ; 2 ; 2050 ; FCTUC ; DEEC ; pass ; 2020010101
+add ; estudante ; outro est; 123 ; rua49 ; 1234-000 ; 1 ; 1 ; 2 ; 2050 ; FCTUC ; DEI; p ; 20200101
+add ; estudante ; pessoa1 est; 123 ; rua49 ; 1234-000 ; 2 ; 1 ; 2 ; 2050 ; FCTUC ; DEI; p2 ; 202001012
+
+add ; funcionario; fulano func; 123 ; avenida ; 9999-567 ; 99999 ; 1 ; 2 ; 2050 ; FCTUC ; DEQ ; pass9
+add ; funcionario; beltrano func; 123 ; avenida2 ; 5555-111 ; 55555 ; 1 ; 2 ; 2050 ; FCTUC ; DEC ; pass5
+add ; funcionario; sicrano func; 123 ; avenida49 ; 8888-000 ; 11111 ; 1 ; 2 ; 2050 ; FCTUC ; DEEC ; pass8
+
+
+
+add ; eleicao; eleicao1est ; descricao; 5; 4; 2021 ; 1; 46; 5; 4; 2021; 1; 50; true; false; false
+add ; eleicao; eleicao2func ; desc; 6; 4; 2021 ; 9; 0; 16; 4; 2021; 23; 30; false; true; false
+add ; eleicao; eleicao3est ; desc desc; 1; 4; 2021 ; 9; 0; 4; 4; 2021; 22; 30; true; false; false
+add ; eleicao; eleicao4est ; desc desc; 23; 5; 2021 ; 9; 0; 12; 7; 2021; 22; 30; true; false; false
+add ; eleicao; eleicao5est ; desc desc; 1; 4; 2021 ; 9; 0; 12; 7; 2021; 22; 30; true; false; false
+
+
+add ; mesavoto ; eleicao1est ; DEI
+add ; mesavoto ; eleicao1est ; DEEC
+
+add ; mesavoto ; eleicao2func ; DEQ
+add ; mesavoto ; eleicao2func ; DEEC
+add ; mesavoto ; eleicao2func ; DEC
+
+add ; mesavoto ; eleicao3est ; DEI
+
+add ; mesavoto ; eleicao5est ; DEI
+
+
+
+localeleitor ; eleicao1est ; 123
+localeleitor ; eleicao1est ; 321
+localeleitor ; eleicao1est ; 12345
+localeleitor ; eleicao1est ; 1
+
+localeleitor ; eleicao2func ; 99999 
+localeleitor ; eleicao2func ; 55555 
+localeleitor ; eleicao2func ; 11111
+
+localeleitor ; eleicao3est ; 123
+localeleitor ; eleicao3est ; 321
+localeleitor ; eleicao3est ; 12345
+
+
+
+remove ; mesavoto ; eleicao2func ; DEC
+
+
+
+add ; lista ; eleicao1est ; lista A ; 123 
+add ; lista ; eleicao1est ; lista B ; 12345 ; 321
+
+add ; lista ; eleicao2func ; lista C ; 99999 
+add ; lista ; eleicao2func ; lista D ; 55555 
+add ; lista ; eleicao2func ; lista E ; 11111 
+
+add ; lista ; eleicao3est ; lista A ; 123 ; 12345 ; 321
+
+
+
+update ; eleicao ; descricao ; eleicao1est ; nova descricao
+
+update ; eleicao ; descricao ; eleicao3est ; nova desc desc
+
+update ; eleicao ; datainicio ; Estudantes ;27; 5; 2021; 19; 35;
+
+update ; eleicao ; datafim ; Estudantes ;27; 5; 2021; 19; 40;
